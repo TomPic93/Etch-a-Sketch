@@ -1,0 +1,114 @@
+html {
+    background-color: rgb(237, 237, 237);
+    
+    height: 90%;
+}
+
+* {
+    font-family: 'Dosis', sans-serif;
+}
+
+#game-container {
+    display: flex;
+    gap: 72px;
+    margin: auto;
+    width: fit-content;
+}
+
+#commands-container {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#canvas-container {
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+}
+
+header {
+    font-size: 50px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Color selector ----------------------- */
+
+#color-input {
+    appearance: none;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+#color-input::-webkit-color-swatch {
+    border-radius: 50%;
+}
+
+/* Buttons ----------------------- */
+
+button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform .15s;
+    font-size: 18px;
+}
+
+button:hover {
+    transform: scale(105%);
+}
+
+/* Size input ----------------------- */
+
+#size-value {
+    font-size: 18px;
+    margin-bottom: -20px;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    background-color: #ededed;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    border: 1px solid #333;
+    border-radius: 25px;
+    background: #fefefe;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 25px;
+    margin-top: -8px;
+    background: #333;
+}
+
+/* footer ----------------------- */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 8px;
+    font-size: 18px;
+}
+
+#gitHubImg {
+    height: 18px;
+}
+
