@@ -1,3 +1,5 @@
+/* Document ----------------------- */
+
 html {
     background-color: rgb(237, 237, 237);
     
@@ -7,6 +9,8 @@ html {
 * {
     font-family: 'Dosis', sans-serif;
 }
+
+/* App main sections ----------------------- */
 
 #game-container {
     display: flex;
@@ -27,7 +31,16 @@ html {
     border: 1px solid black;
     width: 500px;
     height: 500px;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+#canvas-container > * {
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+/* Header / Title ----------------------- */
 
 header {
     font-size: 50px;
@@ -93,7 +106,7 @@ input[type='range']::-webkit-slider-thumb {
     background: #333;
 }
 
-/* footer ----------------------- */
+/* Footer ----------------------- */
 
 .footer {
     position: absolute;
