@@ -28,16 +28,22 @@ html {
 }
 
 #canvas-container {
-    border: 1px solid black;
     width: 500px;
     height: 500px;
     display: flex;
     flex-wrap: wrap;
+    -webkit-box-shadow: -1px 1px 10px 9px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: -1px 1px 10px 9px rgba(0, 0, 0, 0.1);
+    box-shadow: -1px 1px 10px 9px rgba(0, 0, 0, 0.1);
 }
 
 #canvas-container > * {
+    background-color: white;
+}
+
+.visible-grid {
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.422);
 }
 
 /* Header / Title ----------------------- */
@@ -125,3 +131,9 @@ input[type='range']::-webkit-slider-thumb {
     height: 18px;
 }
 
+/* Game functions ----------------------- */
+
+.selected {
+    color: rgb(237, 237, 237);
+    background-color: #333;
+}
