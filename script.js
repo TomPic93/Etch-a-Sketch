@@ -39,8 +39,11 @@ function createCanvas(e) {
     for (i = userInput * userInput ; i > 0; i--) {
         let newDiv = document.createElement("div");
         newDiv.setAttribute("style", `width: ${500 / userInput}px; height: ${500 / userInput}px`)
+        newDiv.classList.add("visible-grid")
         canvasContainer.appendChild(newDiv);
     };
+    // grid visible only when the canvas is being created
+    canvasSizeInput.onchange = () => canvasContainer.childNodes.forEach(div => div.classList.remove("visible-grid"))
     // displays the canvas size
     canvasSizeValue.textContent = `${userInput} x ${userInput}`
 };
@@ -54,7 +57,7 @@ function brushStyle(e) {
     e.target.classList.add("selected")
 };
 
-// Change the single div color inside the canvas based on the brush style
+// Changes the single div color inside the canvas based on the brush style
 function paint() {
     canvasContainer.childNodes.forEach(div => div.addEventListener('mouseover', (e) => {
         if (mouseIsDown) {
@@ -65,15 +68,15 @@ function paint() {
     }))
 };
 
-// return a radom color in rgb format
+// Clears the canvas
+function clearCanvas() {
+    canvasContainer.childNodes.forEach(div => div.style.backgroundColor = "white")
+};
+
+// Returns a radom color in rgb format
 function randomColor() {
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
     return `rgb(${r}, ${g}, ${b})`
 }
-
-// Clears the canvas
-function clearCanvas() {
-    canvasContainer.childNodes.forEach(div => div.style.backgroundColor = "white")
-};
